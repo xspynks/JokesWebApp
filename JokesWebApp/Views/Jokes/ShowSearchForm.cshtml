@@ -1,0 +1,29 @@
+
+@{
+    ViewBag.Title = "Search for a joke";
+    Layout = "_Layout";
+}
+
+<h4>Search for a joke</h4>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ShowSearchResults">
+            
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group pb-3">
+                <label for="SearchPhrase" class="control-label"></label>
+                <input name="SearchPhrase" class="form-control"/>
+            </div>
+            
+            <div class="form-group pb-3">
+                <input type="submit" value="Search" class="btn btn-primary"/>
+            </div>
+            
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
